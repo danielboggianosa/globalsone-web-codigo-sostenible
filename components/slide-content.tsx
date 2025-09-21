@@ -11,7 +11,7 @@ interface SlideContentProps {
 export function SlideContent({ slide }: SlideContentProps) {
   if (slide.type === "title") {
     return (
-      <div className="min-h-[70vh] flex items-center justify-center bg-primary text-primary-foreground rounded-lg">
+      <div className="min-h-[70vh] flex items-center justify-center u-gradient-hero text-primary-foreground rounded-lg">
         <div className="text-center space-y-6 px-8">
           <img
             src={slide.image || "/placeholder.jpg"}
