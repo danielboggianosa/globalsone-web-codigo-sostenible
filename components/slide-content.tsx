@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import type { Slide } from "@/lib/slides-data"
@@ -13,10 +14,12 @@ export function SlideContent({ slide }: SlideContentProps) {
     return (
       <div className="min-h-[70vh] flex items-center justify-center u-gradient-hero text-primary-foreground rounded-lg">
         <div className="text-center space-y-6 px-8">
-          <img
+          <Image
             src={slide.image || "/placeholder.jpg"}
             alt="Código Sostenible"
-            className="mx-auto w-32 h-32 object-cover rounded-full border-4 border-primary-foreground/20"
+            width={128}
+            height={128}
+            className="mx-auto object-cover rounded-full border-4 border-primary-foreground/20"
           />
           <h1 className="text-5xl font-bold text-balance">{slide.title}</h1>
           {slide.subtitle && (
@@ -34,10 +37,12 @@ export function SlideContent({ slide }: SlideContentProps) {
     return (
       <div className="space-y-8">
         <div className="text-center space-y-4">
-          <img
+          <Image
             src={slide.image || "/placeholder.jpg"}
             alt={slide.title}
-            className="mx-auto w-24 h-24 object-cover rounded-lg"
+            width={96}
+            height={96}
+            className="mx-auto object-cover rounded-lg"
           />
           <h1 className="text-4xl font-bold text-primary text-balance">{slide.title}</h1>
           {slide.subtitle && (
@@ -80,10 +85,12 @@ export function SlideContent({ slide }: SlideContentProps) {
     return (
       <div className="space-y-8">
         <div className="text-center space-y-4">
-          <img
+          <Image
             src={slide.image || "/placeholder.jpg"}
             alt={slide.title}
-            className="mx-auto w-20 h-20 object-cover rounded-lg"
+            width={80}
+            height={80}
+            className="mx-auto object-cover rounded-lg"
           />
           <h1 className="text-3xl font-bold text-primary text-balance">{slide.title}</h1>
           {slide.subtitle && (
